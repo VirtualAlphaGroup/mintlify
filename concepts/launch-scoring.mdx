@@ -1,5 +1,5 @@
 ---
-title: "How Launch Scoring Works on VAG"
+title: "Launch Scoring: AI Viability Scores and Day-7 Outcomes"
 sidebarTitle: "Launch Scoring"
 description: "VAG scores every new token launch with an AI viability score and tracks day-7 outcomes to measure which signals actually predict winners."
 ---
@@ -12,7 +12,7 @@ Every launch moves through four stages from detection to outcome:
 
 <Steps>
   <Step title="Alert">
-    The **rh-launch-bot** detects a new token deployment on Robinhood Chain and fires an alert. This is the trigger for all downstream scoring — nothing is scored until the on-chain event is confirmed.
+    VAG detects a new token deployment on Robinhood Chain and fires an alert. This is the trigger for all downstream scoring — nothing is scored until the on-chain event is confirmed.
   </Step>
   <Step title="AI Viability Score">
     An AI viability score from **0 to 100** is assigned at launch time. The score synthesizes signals from the project's description, developer wallet history, social presence, and team information — the same signals captured by the legitimacy fingerprint. Higher scores indicate stronger early-stage quality signals.
