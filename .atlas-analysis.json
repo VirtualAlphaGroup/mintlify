@@ -1,30 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "projectType": "saas",
+  "projectName": "Virtual Alpha Group",
+  "projectDescription": "A real-time intelligence platform tracking tokenized stocks, AI-scored token launches, and the live chain race between Robinhood Chain and Base.",
   "theme": "luma",
-  "name": "Virtual Alpha Group",
-  "colors": {
-    "primary": "#d5f00a",
-    "light": "#444c04",
-    "dark": "#050504"
-  },
-  "favicon": "https://media.brand.dev/f993f907-a275-403a-9626-eade8054471d.png",
-  "logo": {
-    "light": "https://media.brand.dev/4f0006a8-43e0-4f25-b3c7-850242311508.svg",
-    "dark": "https://media.brand.dev/4f0006a8-43e0-4f25-b3c7-850242311508.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "virtualalphagroup.com",
-        "href": "https://virtualalphagroup.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Go to App",
-      "href": "https://virtualalphagroup.com"
-    }
-  },
+  "primaryColor": "#d5f00a",
+  "lightColor": "#444c04",
+  "darkColor": "#050504",
   "navigation": {
     "tabs": [
       {
@@ -108,9 +89,23 @@
       }
     ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/virtualalphagrp"
-    }
-  }
+  "keyFeatures": [
+    "Live Robinhood Chain vs Base chain race dashboard with real-time metrics",
+    "194 tokenized equities and ETFs on Robinhood Chain with live pricing",
+    "AI viability scoring for every new token launch",
+    "Legitimacy fingerprint checks catching fraudulent or low-quality launches",
+    "Launch Radar feed with real-time alerts",
+    "Launchpad leaderboard tracking every factory contract on Robinhood Chain",
+    "RWA and tokenization news aggregation refreshed every 15 minutes",
+    "Whale tracking and holder intelligence",
+    "Wallet tracing and farm/cluster detection (Pro+)",
+    "API access for teams and funds (Alpha tier)"
+  ],
+  "publicApiSurface": [
+    "GET /api/launches — real-time token launch feed",
+    "GET /api/stocks — tokenized equity listings with price and holder data",
+    "GET /api/chain-metrics — Robinhood Chain vs Base live metrics",
+    "GET /api/launchpads — factory contract leaderboard",
+    "Premium API access (Alpha plan)"
+  ]
 }

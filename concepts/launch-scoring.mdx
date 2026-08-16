@@ -1,0 +1,70 @@
+---
+title: "How Launch Scoring Works on VAG"
+sidebarTitle: "Launch Scoring"
+description: "VAG scores every new token launch with an AI viability score and tracks day-7 outcomes to measure which signals actually predict winners."
+---
+
+When a new token launches on Robinhood Chain, the window to act is short. VAG's launch scoring pipeline runs automatically the moment a new token is detected, giving you an AI-generated viability score and a legitimacy fingerprint before most traders have even heard of the project. Over time, VAG records day-7 outcomes for every scored launch — building a ground-truth dataset that shows which signals actually separate winners from duds.
+
+## The Scoring Pipeline
+
+Every launch moves through four stages from detection to outcome:
+
+<Steps>
+  <Step title="Alert">
+    The **rh-launch-bot** detects a new token deployment on Robinhood Chain and fires an alert. This is the trigger for all downstream scoring — nothing is scored until the on-chain event is confirmed.
+  </Step>
+  <Step title="AI Viability Score">
+    An AI viability score from **0 to 100** is assigned at launch time. The score synthesizes signals from the project's description, developer wallet history, social presence, and team information — the same signals captured by the legitimacy fingerprint. Higher scores indicate stronger early-stage quality signals.
+  </Step>
+  <Step title="Legitimacy Fingerprint">
+    Eight structured checks run simultaneously with scoring to surface red flags and quality signals. See the [Legitimacy Fingerprint](/concepts/legitimacy-fingerprint) page for a full breakdown of what each check verifies.
+  </Step>
+  <Step title="Day-7 Outcome Check">
+    Seven days after launch, VAG records the outcome:
+    - **Good** — the token graduated or achieved 3× or more of its launch market cap
+    - **Dud** — everything else
+
+    This binary outcome is stored against the launch's viability score, building the win-rate dataset you see on the Launches page.
+  </Step>
+</Steps>
+
+## What the AI Viability Score Considers
+
+The viability score is computed from signals that are available at the moment of launch — no hindsight, no post-launch data. The primary inputs mirror the fingerprint checks:
+
+| Signal | What It Captures |
+|---|---|
+| Project description quality | Is the description genuine, specific, and original? |
+| Developer wallet age | Has the deployer wallet been active long enough to suggest a real team? |
+| Social presence | Are Twitter/X and other social accounts linked and populated? |
+| Team signals | Is team information provided, with verifiable accounts? |
+| Website | Does the project have a live web presence? |
+
+The score is a composite — a project that passes all checks strongly will score higher than one that passes only a few, and the relative weight of each signal is learned from the historical outcome dataset.
+
+## Reading the Win-Rate Chart
+
+On the [Launches page](/features/launch-feed), the **win-rate-by-viability-bucket** chart groups all recorded launches into score ranges and shows the percentage of each bucket that achieved a "good" outcome at day 7. Use this chart to calibrate how much weight to give a score when you're evaluating a new alert:
+
+- Buckets with consistently high win rates tell you the score is a meaningful predictor in that range
+- Buckets with low or flat win rates suggest the score alone isn't enough — dig into the fingerprint
+
+## Current Dataset
+
+VAG has recorded **1,000 day-7 outcomes** to date. The win-rate chart and per-check analysis on the Launches page are all derived from this growing dataset. As more outcomes are recorded, the signal-to-noise ratio in the buckets improves.
+
+<Tip>
+  Upgrade to Premium and use **Launch Radar** to get alerted the moment a high-scoring launch goes live — before the window closes. Launch Radar filters the firehose of new launches down to the ones that clear your viability score threshold.
+</Tip>
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="Launch Feed" icon="bolt" href="/features/launch-feed">
+    Browse every scored launch, filter by viability score, and inspect fingerprint results.
+  </Card>
+  <Card title="Legitimacy Fingerprint" icon="fingerprint" href="/concepts/legitimacy-fingerprint">
+    Understand the eight checks that run on every launch at detection time.
+  </Card>
+</CardGroup>

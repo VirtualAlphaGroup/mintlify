@@ -1,0 +1,98 @@
+---
+title: "Compare Robinhood Chain and Base Side by Side"
+sidebarTitle: "Compare"
+description: "The Compare page puts Robinhood Chain and Base side by side with live chain metrics, historical charts, and the public equities behind each chain."
+---
+
+The Compare page is VAG's dedicated arena for the Robinhood Chain vs Base race — two L2s competing for the same Virtuals economy, viewed side by side. Every significant dimension of chain performance appears here in one place: the public companies and stock prices behind each chain, seven historical metric charts across four timeframes, and a full head-to-head metrics table sourced from L2Beat, DefiLlama, growthepie, and api.virtuals.io. Use this page when you want the whole picture, not just the current-moment signal.
+
+## The Equities
+
+Each chain is backed by a publicly traded company. VAG surfaces live stock data for both so you can track market sentiment alongside on-chain fundamentals.
+
+<CardGroup cols={2}>
+  <Card title="$HOOD — Robinhood Markets, Inc." icon="chart-line">
+    **Exchange:** NYSE
+    **Live price:** Updated continuously via Yahoo Finance
+    **Approximate market cap:** Price × latest reported basic shares (SEC filing)
+    **Funded customers:** 28.5M
+    **Total platform assets:** $369B
+  </Card>
+  <Card title="$COIN — Coinbase Global, Inc." icon="chart-line">
+    **Exchange:** NASDAQ
+    **Live price:** Updated continuously via Yahoo Finance
+    **Approximate market cap:** Price × latest reported basic shares (SEC filing)
+    **Monthly transacting users:** 8.2M
+    **Assets on platform:** $294B
+  </Card>
+</CardGroup>
+
+<Note>
+  **Market cap is approximate.** VAG calculates market cap as the live stock price multiplied by the most recently reported basic share count from SEC filings (10-K or 10-Q). This figure does not account for dilutive securities such as options, RSUs, or convertible instruments. Treat it as a directional indicator, not a precise valuation. **User metrics also differ by disclosure methodology:** Robinhood reports funded customer accounts; Coinbase reports monthly transacting users. These are not equivalent definitions and should not be compared directly as a measure of user engagement.
+</Note>
+
+## Charts
+
+The chart section lets you plot any of seven metrics for both chains simultaneously, across four timeframes. Use it to identify crossover points, divergence trends, and relative growth rates over time.
+
+### Available Metrics
+
+Select the metric you want to chart using the metric selector above the chart area:
+
+| Metric | What the chart shows |
+|---|---|
+| **Stock price** | Daily closing price for $HOOD and $COIN from Yahoo Finance |
+| **Value secured** | L2Beat TVS (Total Value Secured) — assets locked in bridge contracts |
+| **DeFi TVL** | Aggregate value locked in DeFi protocols from DefiLlama |
+| **DEX volume** | Daily DEX trading volume from DefiLlama |
+| **Active addresses** | Daily unique addresses that sent at least one transaction (growthepie) |
+| **Transactions** | Total daily transaction count (growthepie) |
+| **Stablecoins** | Total stablecoin supply on each chain (growthepie) |
+
+### Available Timeframes
+
+| Timeframe | Data window |
+|---|---|
+| **7D** | Last 7 days — short-term momentum and weekly patterns |
+| **30D** | Last 30 days — monthly trend and recent inflection points |
+| **90D** | Last 90 days — medium-term growth trajectory |
+| **1Y** | Last 12 months — full cycle context and structural shifts |
+
+### How to Read the Charts
+
+Both chains are overlaid on the same axis so you can compare them directly. The legend identifies each chain by color. Hover over any point to see the exact value for that day. The percentage label in the top corner of each chart shows the total % change for the selected metric over the selected timeframe — positive figures appear in green, negative in red.
+
+<Tip>
+  Start with **90D / DeFi TVL** to get an immediate read on which chain has been absorbing more capital over the medium term, then switch to **7D / DEX volume** to check whether the current week's trading activity is consistent with that trend.
+</Tip>
+
+## Chain Comparison Table
+
+The table below reproduces the full head-to-head metrics view. Every row uses the same data source and the same methodology for both chains.
+
+| Metric | Robinhood Chain | Base |
+|---|---|---|
+| 7d value-secured change (L2Beat) | +6.3% | +0.7% |
+| Value secured (L2Beat TVS) | $1.10B | $11.82B |
+| DeFi TVL (DefiLlama) | $544.8M | $4.62B |
+| Stablecoins (growthepie) | $637.6M | $4.81B |
+| DEX volume 24h (DefiLlama) | $305.0M | $283.9M |
+| Active addresses / day (growthepie) | 589,571 | 266,966 |
+| Transactions / day (growthepie) | 6,706,535 | 6,572,194 |
+| Median tx cost (growthepie) | $0.0071 | $0.0008 |
+| App fees / day (growthepie) | $2.0M | $1.3M |
+| Chain profit / day (growthepie) | $67.9K | $31.5K |
+| Virtuals launches 24h (api.virtuals.io) | 180 | 22 |
+
+For a full explanation of what each row measures, how it is calculated, and how often it updates, see the [Chain Metrics Reference](/features/chain-metrics).
+
+## Data Sources
+
+| Source | What VAG uses it for |
+|---|---|
+| **L2Beat** | Value secured (TVS) and 7-day TVS change |
+| **growthepie** | Stablecoins, active addresses, transactions, median tx cost, app fees, chain profit |
+| **DefiLlama** | DeFi TVL, DEX volume 24h, net inflow (TVL delta) |
+| **api.virtuals.io** | Virtuals Protocol launch counts |
+| **Yahoo Finance** | Live stock prices and historical daily closes for $HOOD and $COIN |
+| **SEC EDGAR** | Latest reported basic share counts used in market cap calculation |

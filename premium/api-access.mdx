@@ -1,0 +1,72 @@
+---
+title: "API Access for Teams and Funds (Alpha Plan)"
+sidebarTitle: "API Access"
+description: "VAG's Alpha plan provides API access to live on-chain data — launches, stock tokens, chain metrics, and launchpad data — for teams and funds building on top of VAG intelligence."
+---
+
+The VAG API gives you programmatic access to the same real-time on-chain intelligence that powers the VAG platform — launches, tokenized equities, chain metrics, and launchpad rankings — delivered directly to your systems. It's built for **teams, quantitative funds, and builders** who need to integrate live Robinhood Chain data into their own workflows, models, or products rather than consuming it through the VAG dashboard.
+
+API access is included in the **Alpha plan ($200/mo, coming soon)**.
+
+## Available Endpoints
+
+The Alpha plan gives you access to four core data surfaces:
+
+| Endpoint | Description |
+|---|---|
+| `GET /api/launches` | Real-time token launch feed with AI viability scores and legitimacy fingerprints |
+| `GET /api/stocks` | Tokenized equity listings — live price, on-chain market cap, and holder count |
+| `GET /api/chain-metrics` | Live Robinhood Chain vs Base metrics side by side |
+| `GET /api/launchpads` | Factory contract leaderboard ranked by launch counts |
+
+## Authentication
+
+When you subscribe to the Alpha plan, your API key is generated and made available through the **Alpha plan dashboard**. Pass your key in the request header for every API call. Full authentication documentation is provided to active subscribers.
+
+<Warning>
+  Do not share your API key with anyone outside your team. If you believe your key has been compromised, contact the VAG team immediately at [virtualalphagroup.com](https://virtualalphagroup.com) — your key can be rotated without interrupting your subscription.
+</Warning>
+
+## Rate Limits
+
+Rate limit details are available to active Alpha subscribers. Limits are set to support team-scale usage; if your use case requires higher throughput, reach out to the VAG team to discuss your requirements.
+
+## Custom Watchlists and Team Seats
+
+The Alpha plan includes **custom watchlist management** — configure and save filtered views of the launch feed, stock listings, or wallet activity so your team always starts from the signals that matter most to your strategy. Multiple **team seats** are also included, so your analysts, developers, and risk managers can all access VAG intelligence under a single plan.
+
+## Priority Signals
+
+As an Alpha subscriber, you receive **priority signal delivery** — high-confidence alerts and intelligence updates are pushed to you ahead of Basic and Pro tier users. This ensures that time-sensitive signals reach your models and decision-makers before they move through the broader platform.
+
+## How to Get Access
+
+<Steps>
+  <Step title="Go to the pricing page">
+    Visit [virtualalphagroup.com/pricing](https://virtualalphagroup.com/pricing) to view all available plans.
+  </Step>
+  <Step title="Select the Alpha plan">
+    Choose the **Alpha plan** ($200/mo). Note that the Alpha plan is coming soon — you can join the waitlist or sign up for Basic in the meantime.
+  </Step>
+  <Step title="Complete checkout via Stripe">
+    VAG payments are processed securely through Stripe. Complete your subscription checkout to activate your account.
+  </Step>
+  <Step title="Retrieve your API key">
+    Once your Alpha subscription is active, log in to the VAG dashboard and retrieve your API key from the **API Access** section. Use this key to authenticate all requests to the VAG API.
+  </Step>
+</Steps>
+
+---
+
+<Note>
+  API access is included exclusively in the Alpha plan ($200/mo). This plan is coming soon. The API is intended for use by teams and funds integrating VAG intelligence into their own systems — **resale or redistribution of VAG data is not permitted** under the terms of service.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="View All Plans" icon="credit-card" href="/premium/plans">
+    Compare Basic, Pro, and Alpha to find the right tier for your needs.
+  </Card>
+  <Card title="Launch Radar" icon="satellite-dish" href="/premium/launch-radar">
+    Learn about the real-time launch feed that powers the launches endpoint.
+  </Card>
+</CardGroup>

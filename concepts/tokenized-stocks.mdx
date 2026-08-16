@@ -1,0 +1,69 @@
+---
+title: "Tokenized Stocks on Robinhood Chain"
+sidebarTitle: "Tokenized Stocks"
+description: "Tokenized equities are on-chain representations of real stocks and ETFs, issued via the Robinhood Chain StockFactory and tracked by VAG in real time."
+---
+
+Tokenized stocks are on-chain ERC-20 tokens that represent ownership exposure to real-world equities and ETFs — think NVDA or SPY living on a blockchain. On Robinhood Chain, each tokenized equity is issued through an official **StockFactory** registry contract deployed by Robinhood. VAG tracks every token in that registry in real time, giving you live price data, on-chain capitalization, and holder activity without having to manually monitor individual contracts.
+
+## How They're Created
+
+Every tokenized equity on Robinhood Chain originates from the same source: the **StockFactory** contract. When Robinhood lists a new stock on-chain, the StockFactory emits a deployment event that registers the token's contract address, symbol, and metadata. VAG traces each token back to that official deployment event, so you can be confident the contracts you're looking at are the canonical Robinhood-issued versions — not third-party imitations.
+
+You can verify any individual token by following the Blockscout link VAG surfaces next to each contract address.
+
+## What VAG Tracks Per Token
+
+For every stock in the StockFactory registry, VAG displays:
+
+| Field | Description |
+|---|---|
+| Symbol | Ticker symbol (e.g., NVDA, SPY) |
+| Company name | Full name of the underlying equity or ETF |
+| Live price | Current token price pulled from on-chain data |
+| On-chain cap | Tokenized supply × live price |
+| Holder count | Number of unique addresses holding the token |
+| Contract address | Verified address linked to Blockscout for on-chain inspection |
+
+## Current Coverage
+
+<CardGroup cols={2}>
+  <Card title="194 Tokenized Equities / ETFs" icon="chart-mixed">
+    Total tokens issued via the StockFactory registry on Robinhood Chain.
+  </Card>
+  <Card title="95 Actively Trading" icon="arrow-trend-up">
+    Tokens with live price discovery and meaningful on-chain activity.
+  </Card>
+  <Card title="$28.9M On-Chain Value" icon="dollar-sign">
+    Aggregate on-chain cap across all tokenized stocks tracked by VAG.
+  </Card>
+  <Card title="486,912 Holder Positions" icon="wallet">
+    Total holder positions across all tracked tokenized equities.
+  </Card>
+</CardGroup>
+
+## Example Tokens
+
+Some of the most active tokenized equities currently tracked by VAG:
+
+| Token | Underlying |
+|---|---|
+| NVDA | NVIDIA Corporation |
+| AAPL | Apple Inc. |
+| SPCX | SpaceX Class A |
+| TSLA | Tesla, Inc. |
+| GOOGL | Alphabet Inc. (Class A) |
+| MSFT | Microsoft Corporation |
+| AMD | Advanced Micro Devices |
+| PLTR | Palantir Technologies |
+| AMZN | Amazon.com, Inc. |
+| META | Meta Platforms, Inc. |
+| SPY | SPDR S&P 500 ETF Trust |
+
+<Info>
+  Not every token in the StockFactory registry is actively trading. Some tokens have zero holders and minimal on-chain activity — they appear in the registry but have seen little to no secondary market participation since issuance. VAG distinguishes actively trading tokens from dormant ones in the stocks dashboard.
+</Info>
+
+<Note>
+  **On-chain cap** is calculated as tokenized supply × current price. It reflects only the value of tokens that have been minted and exist on-chain — it is not the total market capitalization of the underlying company. For example, NVDA's on-chain cap represents a small fraction of NVIDIA's actual market cap. This data is provided for informational purposes only and is **not investment advice**.
+</Note>

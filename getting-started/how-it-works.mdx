@@ -1,0 +1,110 @@
+---
+title: "How Virtual Alpha Group Works"
+sidebarTitle: "How It Works"
+description: "Virtual Alpha Group watches Robinhood Chain and Base in real time, scoring launches and tracking tokenized stocks across multiple on-chain data sources."
+---
+
+Virtual Alpha Group (VAG) is a real-time on-chain intelligence platform that monitors Robinhood Chain and Base block by block — tracking value secured, liquidity, activity, fees, and every new token launch as it happens. This page explains what VAG monitors, where its data comes from, how live updates work, and which features are available to everyone versus which require a Premium subscription.
+
+---
+
+## What VAG Monitors
+
+VAG aggregates signals across six core intelligence areas, giving you a unified view of on-chain activity across both chains.
+
+<CardGroup cols={2}>
+  <Card title="Chain Race" icon="flag-checkered" href="/features/chain-race-dashboard">
+    Compare Robinhood Chain and Base head-to-head across TVL, net inflow, DEX volume, stablecoins, and fees. The dashboard reflects whichever chain is pulling more inflow at any given moment.
+  </Card>
+  <Card title="Tokenized Stocks" icon="chart-line" href="/features/stock-tokens">
+    Browse the full directory of tokenized equities and ETFs trading on Robinhood Chain — 194 tokens with live prices and holder data.
+  </Card>
+  <Card title="Launch Intelligence" icon="rocket" href="/features/launch-feed">
+    Every new token launch is automatically scored for viability and legitimacy. Full launch scores and fingerprints are available to Premium subscribers.
+  </Card>
+  <Card title="Launchpad Leaderboard" icon="trophy" href="/features/launchpads">
+    See which factory contracts are shipping the most tokens on Robinhood Chain, ranked by launch count and DEX volume.
+  </Card>
+  <Card title="RWA News Feed" icon="newspaper" href="/features/news-feed">
+    A curated feed of real-world asset and tokenization headlines refreshed every 15 minutes from CoinDesk, Cointelegraph, and more.
+  </Card>
+  <Card title="Whale Tracking" icon="fish" href="/features/whale-tracking">
+    Monitor large wallet movements and holder intelligence. Premium subscribers get full whale tracking plus wallet tracing and funder graphs.
+  </Card>
+</CardGroup>
+
+---
+
+## Data Sources
+
+VAG pulls from a carefully selected set of public and on-chain data providers to ensure accuracy and depth across every metric.
+
+| Source | What It Provides |
+|---|---|
+| **L2Beat** | Layer 2 security metrics, value secured, and chain risk assessments for Robinhood Chain and Base |
+| **DefiLlama** | Chain TVL, protocol-level liquidity, DEX volumes, and stablecoin data |
+| **growthepie** | Cross-chain activity metrics, fee data, and ecosystem growth analytics (~1-day data lag) |
+| **api.virtuals.io** | Live launch data, token metadata, and launchpad activity from the Virtuals Protocol ecosystem |
+| **Blockscout** | Block-level on-chain data, transaction activity, and contract analytics |
+| **Yahoo Finance** | Reference pricing and financial data for tokenized real-world assets and their underlying equities |
+| **SEC EDGAR** | Official regulatory filings and disclosures relevant to tokenized stocks and RWA issuers |
+
+---
+
+## How Live Updates Work
+
+VAG refreshes its core metrics continuously as new blocks are confirmed on Robinhood Chain and Base. Here is what to expect for each data type:
+
+- **Chain metrics** (TVL, net inflow, DEX volume, stablecoins, VIRTUAL price) — updated in real time, block by block
+- **Launch feed** — new token launches appear as soon as they are detected on-chain
+- **Tokenized stock prices** — live prices are available to Premium (Basic and above) subscribers
+- **RWA news feed** — refreshed every 15 minutes from external sources
+- **growthepie analytics** — carries approximately a 1-day lag due to upstream data processing; use these figures for trend analysis rather than real-time decisions
+
+---
+
+## Public vs. Premium Features
+
+A significant portion of VAG's intelligence is freely accessible to anyone who visits the platform. Premium plans unlock the deeper, actionable layers.
+
+### Free for Everyone
+
+- **Chain race metrics** — TVL, net inflow, DEX volume, stablecoins, and fees across both chains
+- **Token launch list** — every new launch visible with basic metadata
+- **Launchpad leaderboard** — ranked view of launchpad activity
+- **Stock token directory** — full list of tokenized RWAs with basic info
+- **RWA news feed** — curated news updated every 15 minutes
+
+### Premium — Basic ($20/mo)
+
+- Live Robinhood Chain stock prices and top movers
+- Whale tracking and holder intelligence
+- Full launch scores and legitimacy fingerprints
+- Launch Radar feed (real-time alerts on new launches)
+- Cancel anytime — no long-term commitment
+
+### Premium — Pro ($60/mo, coming soon)
+
+Everything in Basic, plus:
+
+- Wallet tracing and funder graphs
+- Farm and cluster detection
+- Priority alerts
+
+### Premium — Alpha ($200/mo, coming soon)
+
+Everything in Pro, plus:
+
+- Full API access
+- Priority signals
+- Custom watchlists and team seats
+
+<Tip>
+  Start with the free tier to explore chain metrics and the launch directory, then upgrade to Basic when you're ready for live prices and the full intelligence layer.
+</Tip>
+
+---
+
+<Note>
+  All data and analysis provided by Virtual Alpha Group is for informational purposes only. Nothing on this platform constitutes financial or investment advice. Always do your own research before making any financial decisions.
+</Note>

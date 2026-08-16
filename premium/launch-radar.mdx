@@ -1,0 +1,87 @@
+---
+title: "Launch Radar: Real-Time Token Launch Alerts (Premium)"
+sidebarTitle: "Launch Radar"
+description: "Launch Radar delivers real-time alerts for every new token launch on Robinhood Chain, with AI viability scores and legitimacy fingerprints attached — available on Basic and above."
+---
+
+Launch Radar is your real-time window into every new token launch on Robinhood Chain. Instead of manually sifting through on-chain noise, you get an instant, structured alert the moment a new launch is detected — complete with an AI viability score and a full legitimacy fingerprint breakdown. That means you can evaluate a project before the crowd has even heard of it, giving you a critical edge in fast-moving markets.
+
+## How It Works
+
+The moment VAG's `rh-launch-bot` detects a new token launch, Launch Radar surfaces it in your feed. Each alert is generated automatically and includes the full AI viability score alongside all eight legitimacy fingerprint checks — so you're never looking at raw contract data, only actionable intelligence.
+
+## What Each Alert Includes
+
+Every Launch Radar alert gives you a complete snapshot of the launch at the moment of detection:
+
+| Field | Details |
+|---|---|
+| **Token name & symbol** | The project's on-chain identity |
+| **Launch timestamp** | Exact detection time in UTC |
+| **AI viability score** | A composite score assessing the launch's potential |
+| **Legitimacy fingerprint** | Pass/fail result for each of the 8 checks (see below) |
+| **Status** | `pending` at launch; updated to `good` or `dud` after day 7 |
+
+### Legitimacy Fingerprint Checks
+
+The fingerprint evaluates eight signals at the moment of launch:
+
+| Check | What It Looks At |
+|---|---|
+| `realDescription` | Whether the project has a meaningful, non-generic description |
+| `website` | Whether a live website is linked |
+| `socials` | Whether social profiles are present and active |
+| `devWalletAge` | How long the developer wallet has been active on-chain |
+| `team` | Whether team information is verifiable |
+| `xAccount` | Whether a linked X (Twitter) account exists |
+| `xPfp` | Whether the X account has a profile picture set |
+| `descriptionOriginal` | Whether the description appears original, not copied |
+
+### Day-7 Outcome
+
+Seven days after launch, each alert is updated with an outcome:
+- **Good** — the token graduated or achieved 3× or more of its launch market cap
+- **Dud** — the token failed to meet either threshold
+
+VAG has recorded over 1,000 outcomes to date, and the dataset continues to grow with every new launch cycle.
+
+## How to Access Launch Radar
+
+Launch Radar is available to all subscribers on the **Basic plan and above**.
+
+<Steps>
+  <Step title="Log in to VAG">
+    Go to [virtualalphagroup.com](https://virtualalphagroup.com) and sign in with your account.
+  </Step>
+  <Step title="Open the Launches section">
+    Navigate to the **Launches** section from the main dashboard.
+  </Step>
+  <Step title="Browse the real-time feed">
+    The Launch Radar feed loads automatically. New launches appear as they are detected, with scores and fingerprints attached.
+  </Step>
+</Steps>
+
+## Free Tier vs. Basic
+
+Free users can see the launch list, but **viability scores and fingerprint details are locked behind a paid subscription**. Upgrading to Basic ($20/mo) unlocks the full alert for every launch — scores, all eight fingerprint checks, and day-7 outcome tracking.
+
+<CardGroup cols={2}>
+  <Card title="Launch Scoring" icon="chart-bar" href="/concepts/launch-scoring">
+    Understand how VAG's AI viability score is calculated for each new launch.
+  </Card>
+  <Card title="Legitimacy Fingerprint" icon="fingerprint" href="/concepts/legitimacy-fingerprint">
+    Learn what each of the eight fingerprint checks evaluates and why it matters.
+  </Card>
+</CardGroup>
+
+Ready to get access? [View plans and subscribe →](/premium/plans)
+
+---
+
+<Tip>
+  Sort the Launch Radar feed by **viability score** (descending) to immediately focus on the highest-potential launches. Pair that with the legitimacy fingerprint to quickly filter out projects with multiple failed checks.
+</Tip>
+
+<Note>
+  High viability scores are informational signals, not guarantees of success. The current dataset shows all 0% day-7 win rates — the signal is actively evolving as more outcome data accumulates across launch cycles. Treat scores as one input among many, not a definitive verdict.
+</Note>

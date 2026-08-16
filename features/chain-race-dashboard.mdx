@@ -1,0 +1,95 @@
+---
+title: "Chain Race Dashboard: Robinhood Chain vs Base Live"
+sidebarTitle: "Dashboard"
+description: "The Chain Race Dashboard shows a live head-to-head between Robinhood Chain and Base, updated block by block with inflow, TVL, volume, and launch data."
+---
+
+The Chain Race Dashboard is VAG's central command view for the Virtuals economy. It watches Robinhood Chain and Base simultaneously — block by block — and surfaces every signal that matters: capital inflow, total value locked, DEX volume, token launches, fees, and more. Everything on this page refreshes continuously so you always see where momentum is right now, not where it was an hour ago.
+
+## What the Page Color Means
+
+The background of the dashboard shifts color based on which chain is pulling more net inflow today. When Robinhood Chain is leading, the page takes on Robinhood's brand hue; when Base is ahead, it shifts to Base's. This is the fastest possible signal — you know at a glance which chain is winning capital today before you read a single number.
+
+<Info>
+  The color is driven by the **Net Inflow 24h** figure (TVL delta proxy). It updates continuously as on-chain data flows in.
+</Info>
+
+## The Headline Ticker
+
+Six live stats run across the top of the dashboard. Here is what each one means:
+
+| Stat | What it measures | Source |
+|---|---|---|
+| **Launches 24h** | New token launches via Virtuals Protocol on Robinhood Chain in the last 24 hours | api.virtuals.io |
+| **Chain TVL** | Total value locked in DeFi protocols across Robinhood Chain | DefiLlama |
+| **Net Inflow 24h** | 24-hour change in TVL — a proxy for net capital flowing into the chain | DefiLlama (TVL delta) |
+| **DEX Vol 24h** | Total decentralized exchange trading volume on Robinhood Chain in the last 24 hours | DefiLlama |
+| **Stablecoins** | Total stablecoin supply bridged or minted on Robinhood Chain | growthepie |
+| **VIRTUAL** | Live spot price of the VIRTUAL governance token | Market data feed |
+
+The percentage labels next to each figure show the change over the most recent comparable window (e.g., **+15.4% 7d** next to Chain TVL, **-36.3% 1d** next to DEX vol). Negative percentages are styled in red; positive in green.
+
+## Dashboard Sections
+
+### 1. The Equities
+
+The top cards show the public company behind each chain alongside its live stock price and market capitalization.
+
+<CardGroup cols={2}>
+  <Card title="$HOOD — Robinhood Markets" icon="chart-line">
+    Robinhood Markets, Inc. operates Robinhood Chain. Cards display the live NYSE price and approximate market cap derived from the latest reported basic share count (SEC filings). **Funded customers: 28.5M · Platform assets: $369B.**
+  </Card>
+  <Card title="$COIN — Coinbase" icon="chart-line">
+    Coinbase Global, Inc. is the company behind Base. Cards display the live NASDAQ price and approximate market cap. **Monthly transacting users: 8.2M · Assets on platform: $294B.**
+  </Card>
+</CardGroup>
+
+Stock prices and market caps refresh continuously via Yahoo Finance. Market cap is calculated as price × latest reported basic shares from SEC filings and is therefore approximate — it does not account for dilutive securities.
+
+### 2. The Race
+
+The Race section is the core head-to-head comparison table. Every row shows the same metric for both chains so you can compare them on equal footing:
+
+| Metric | Robinhood Chain | Base |
+|---|---|---|
+| 7d value-secured change (L2Beat) | +6.3% | +0.7% |
+| Value secured (L2Beat TVS) | $1.10B | $11.82B |
+| DeFi TVL (DefiLlama) | $544.8M | $4.62B |
+| Stablecoins (growthepie) | $637.6M | $4.81B |
+| DEX volume 24h (DefiLlama) | $305.0M | $283.9M |
+| Active addresses / day (growthepie) | 589,571 | 266,966 |
+| Transactions / day (growthepie) | 6,706,535 | 6,572,194 |
+| Median tx cost (growthepie) | $0.0071 | $0.0008 |
+| App fees / day (growthepie) | $2.0M | $1.3M |
+| Chain profit / day (growthepie) | $67.9K | $31.5K |
+| Virtuals launches 24h (api.virtuals.io) | 180 | 22 |
+
+Each metric uses the same data source and the same methodology for both chains, ensuring apples-to-apples comparison. See [Chain Metrics Reference](/features/chain-metrics) for a full explanation of every row.
+
+### 3. Macro Charts
+
+Below the table, four 90-day historical charts let you zoom out from the real-time race and see how each chain's fundamentals have trended over time:
+
+| Chart | What it shows |
+|---|---|
+| **Value Secured** | L2Beat Total Value Secured (TVS) — assets locked in the chain's bridge contracts |
+| **DeFi TVL** | DefiLlama aggregate TVL across all DeFi protocols on each chain |
+| **DEX Volume** | Daily DEX trading volume from DefiLlama, smoothed to daily closes |
+| **Stablecoin Supply** | Stablecoin balances on each chain from growthepie, with a one-day reporting lag |
+
+Each chart overlays both chains so you can see crossover points, divergence, and relative growth trajectories at a glance.
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="Compare" icon="scale-balanced" href="/features/compare">
+    Deep-dive side-by-side comparison with multi-timeframe charts across seven metrics and full chain data.
+  </Card>
+  <Card title="Chain Metrics Reference" icon="book-open" href="/features/chain-metrics">
+    Every metric explained — definition, data source, update frequency, and methodology notes.
+  </Card>
+</CardGroup>
+
+<Note>
+  **Data freshness and sources.** L2Beat and DefiLlama figures update continuously. growthepie figures (active addresses, transactions, median tx cost, app fees, chain profit, stablecoins) carry a one-day lag reflecting daily aggregation. Virtuals launch counts come from api.virtuals.io and update in near real time. Stock prices are sourced from Yahoo Finance. All figures are informational and should not be treated as financial advice.
+</Note>

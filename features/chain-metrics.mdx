@@ -1,0 +1,166 @@
+---
+title: "Chain Metrics Reference: Every Data Point Explained"
+sidebarTitle: "Chain Metrics"
+description: "A complete reference for every chain metric tracked by VAG — what each measure means, its data source, and how often it updates."
+---
+
+VAG tracks twelve metrics across Robinhood Chain and Base. Each one is chosen because it reflects a distinct dimension of chain health: security, liquidity, economic activity, cost, profitability, and ecosystem growth. Together they give you a 360-degree picture of where each chain stands — not just in terms of raw size, but momentum, efficiency, and where the Virtuals economy is taking root. This page defines every metric precisely so you always know what you are looking at and where the numbers come from.
+
+<Note>
+  **Update cadence summary.** L2Beat and DefiLlama figures update continuously as new blocks are confirmed. growthepie figures (active addresses, transactions, median tx cost, app fees, chain profit, and stablecoins) are aggregated daily and carry a one-day reporting lag. Virtuals launch counts from api.virtuals.io update in near real time. One methodology is used per metric across both chains so all comparisons are apples-to-apples.
+</Note>
+
+## Metrics
+
+### Value Secured (L2Beat TVS)
+
+**What it measures:** The total value of assets locked in the chain's bridge contracts and secured by the underlying L1 (Ethereum). This is L2Beat's Total Value Secured (TVS) figure — the broadest measure of how much economic weight the chain is responsible for protecting.
+
+**Why it matters:** A higher TVS signals that users trust the chain with larger balances. Rapid TVS growth indicates inbound capital migration; a falling TVS can signal capital flight or protocol-level risk.
+
+**Source:** [L2Beat](https://l2beat.com)
+**Update frequency:** Continuous (block-by-block)
+
+---
+
+### DeFi TVL (DefiLlama)
+
+**What it measures:** The aggregate value of assets deposited into DeFi protocols — DEXs, lending markets, liquid staking, yield optimizers, and more — running on the chain.
+
+**Why it matters:** TVL is the most widely used measure of a chain's DeFi ecosystem depth. It reflects how much capital is actively put to work on-chain, as opposed to sitting idle in wallets or bridges.
+
+**Source:** [DefiLlama](https://defillama.com)
+**Update frequency:** Continuous
+
+---
+
+### Stablecoins
+
+**What it measures:** The total supply of stablecoins (USDC, USDT, DAI, and others) that have been bridged or natively minted on the chain.
+
+**Why it matters:** Stablecoin supply is a reliable proxy for real economic demand. Merchants, traders, and DeFi users hold stablecoins to transact — a growing stablecoin base means the chain is attracting users who intend to spend, not just speculate.
+
+**Source:** [growthepie](https://growthepie.xyz)
+**Update frequency:** Daily, one-day lag
+
+---
+
+### DEX Volume 24h
+
+**What it measures:** The total trading volume executed through decentralized exchanges on the chain in the last 24 hours, denominated in USD.
+
+**Why it matters:** DEX volume captures the pace of economic activity. High volume relative to TVL signals an efficient, liquid market. Comparing 24h DEX volume between Robinhood Chain and Base shows which chain is the more active trading venue for the Virtuals economy right now.
+
+**Source:** [DefiLlama](https://defillama.com)
+**Update frequency:** Continuous
+
+---
+
+### Active Addresses / Day
+
+**What it measures:** The number of unique wallet addresses that sent at least one transaction on the chain in a 24-hour period.
+
+**Why it matters:** Active addresses are the closest on-chain proxy to daily active users. Growth in active addresses — particularly if it outpaces transaction growth — suggests an expanding user base rather than just existing users transacting more.
+
+**Source:** [growthepie](https://growthepie.xyz)
+**Update frequency:** Daily, one-day lag
+
+---
+
+### Transactions / Day
+
+**What it measures:** The total count of transactions included in blocks on the chain in a 24-hour period.
+
+**Why it matters:** Transaction throughput shows how hard the chain is working. Paired with active addresses, it reveals average transactions-per-user and whether the chain is approaching capacity constraints.
+
+**Source:** [growthepie](https://growthepie.xyz)
+**Update frequency:** Daily, one-day lag
+
+---
+
+### Median Tx Cost
+
+**What it measures:** The median transaction fee paid by users on the chain, in USD, over the most recent reporting day.
+
+**Why it matters:** Low transaction costs are a critical driver of user acquisition and retention — especially for the high-frequency, small-value interactions typical in the Virtuals ecosystem (token launches, micro-trades, agent interactions). This metric shows whether a chain is cost-competitive in practice.
+
+**Source:** [growthepie](https://growthepie.xyz)
+**Update frequency:** Daily, one-day lag
+
+---
+
+### App Fees / Day
+
+**What it measures:** The total fees generated by applications (protocols, DEXs, marketplaces) running on the chain in a 24-hour period, in USD. This excludes base-layer sequencer fees.
+
+**Why it matters:** App fees represent the economic surplus that decentralized applications capture from users. A growing app fee total signals a healthy application layer — protocols that attract real usage and generate sustainable revenue.
+
+**Source:** [growthepie](https://growthepie.xyz)
+**Update frequency:** Daily, one-day lag
+
+---
+
+### Chain Profit / Day
+
+**What it measures:** The chain's daily net revenue — total fees collected by the sequencer minus the cost of posting transaction data to Ethereum L1. This is sometimes called "chain net income" or "L2 profit."
+
+**Why it matters:** Chain profit shows whether a chain's economics are self-sustaining. A profitable chain has more flexibility to subsidize users, fund ecosystem grants, and invest in infrastructure. It is the bottom-line measure of chain financial health.
+
+**Source:** [growthepie](https://growthepie.xyz)
+**Update frequency:** Daily, one-day lag
+
+---
+
+### Virtuals Launches 24h
+
+**What it measures:** The number of new tokens launched via Virtuals Protocol on the chain in the last 24 hours.
+
+**Why it matters:** This is VAG's most distinctive metric. Launch velocity shows which chain is the center of gravity for the Virtuals economy — where builders are deploying new agents and tokens. A sustained lead in daily launches signals developer preference and ecosystem momentum.
+
+**Source:** [api.virtuals.io](https://api.virtuals.io)
+**Update frequency:** Near real time
+
+---
+
+### Net Inflow 24h
+
+**What it measures:** The 24-hour change in DeFi TVL, used as a proxy for net capital flow into the chain. A positive figure means more capital entered the chain than left; a negative figure means the opposite.
+
+**Why it matters:** Absolute TVL tells you where capital is; net inflow tells you where it is going. This is the metric that drives the [dashboard's color signal](/features/chain-race-dashboard) — the chain with higher net inflow today is winning the current round of the race.
+
+**Source:** DefiLlama (TVL delta calculation)
+**Update frequency:** Continuous
+
+---
+
+### VIRTUAL Price
+
+**What it measures:** The live spot price of VIRTUAL, the governance and utility token of the Virtuals Protocol ecosystem, denominated in USD.
+
+**Why it matters:** VIRTUAL is the economic connective tissue of the Virtuals economy. Its price reflects aggregate market confidence in the protocol's growth trajectory and is a key input for understanding the value of newly launched agent tokens.
+
+**Source:** Market data feed
+**Update frequency:** Continuous
+
+---
+
+## Quick-Reference Table
+
+| Metric | Source | Update Frequency |
+|---|---|---|
+| Value Secured (TVS) | L2Beat | Continuous |
+| DeFi TVL | DefiLlama | Continuous |
+| Stablecoins | growthepie | Daily (1-day lag) |
+| DEX Volume 24h | DefiLlama | Continuous |
+| Active Addresses / Day | growthepie | Daily (1-day lag) |
+| Transactions / Day | growthepie | Daily (1-day lag) |
+| Median Tx Cost | growthepie | Daily (1-day lag) |
+| App Fees / Day | growthepie | Daily (1-day lag) |
+| Chain Profit / Day | growthepie | Daily (1-day lag) |
+| Virtuals Launches 24h | api.virtuals.io | Near real time |
+| Net Inflow 24h | DefiLlama (delta) | Continuous |
+| VIRTUAL Price | Market data feed | Continuous |
+
+<Tip>
+  Want to see all of these metrics side by side for both chains? Head to the [Compare page](/features/compare) for the full head-to-head table and multi-timeframe historical charts.
+</Tip>

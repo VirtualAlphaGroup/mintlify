@@ -1,0 +1,67 @@
+---
+title: "Stock Token Detail Pages: Individual Token Data"
+sidebarTitle: "Token Detail"
+description: "Each tokenized stock on Robinhood Chain has its own detail page showing live price, on-chain cap, holder count, and a direct link to Blockscout."
+---
+
+Every tokenized stock in the VAG directory has its own dedicated detail page. On it you can see the token's live price, on-chain cap, holder count, and verified contract address — plus a direct link to Blockscout for deeper on-chain exploration.
+
+## Accessing a Token Detail Page
+
+You can reach a token detail page in two ways:
+
+1. **From the Stocks directory** — visit [virtualalphagroup.com/stocks](https://virtualalphagroup.com/stocks) and click any token row.
+2. **Direct URL** — navigate to `virtualalphagroup.com/stocks/<contract-address>`, replacing `<contract-address>` with the token's full checksummed address.
+
+For example, the Firefly Aerospace detail page is at:
+```
+https://virtualalphagroup.com/stocks/0x03bc731ffb162cdd7b98d3c6542bfc291126075d
+```
+
+## What's on Each Detail Page
+
+Each token detail page surfaces the following fields:
+
+| Field | Description |
+|---|---|
+| **Token symbol** | The ticker for the tokenized stock (e.g. `FLY`) |
+| **Company name** | Full legal name of the underlying issuer |
+| **Live price** | Current token price in USD, refreshed continuously |
+| **On-chain cap** | Tokenized supply × price |
+| **Holder count** | Number of unique wallet addresses currently holding the token |
+| **Contract address** | The token's canonical address on Robinhood Chain, with a direct link to Blockscout |
+
+## Example: FLY (Firefly Aerospace Inc.)
+
+The FLY token represents a tokenized position in Firefly Aerospace Inc. on Robinhood Chain. Its detail page shows:
+
+| Field | Value |
+|---|---|
+| **Symbol** | FLY |
+| **Company** | Firefly Aerospace Inc. |
+| **Price** | — *(not actively trading)* |
+| **On-chain cap** | — |
+| **Holders** | 4 |
+| **Contract address** | `0x03bc731ffb162cdd7b98d3c6542bfc291126075d` |
+
+You can inspect this token directly on Blockscout at:
+[https://robinhoodchain.blockscout.com/token/0x03bc731ffb162cdd7b98d3c6542bfc291126075d](https://robinhoodchain.blockscout.com/token/0x03bc731ffb162cdd7b98d3c6542bfc291126075d)
+
+## Data Sources
+
+VAG pulls data for token detail pages from two authoritative sources:
+
+- **Contract identity** — The Robinhood Chain StockFactory registry. Every contract shown on VAG is traced to an official StockFactory deployment event, so you always know you're looking at a canonical tokenized equity.
+- **Market and holder data** — Blockscout, the Robinhood Chain block explorer. Price, on-chain cap, and holder counts are sourced directly from Blockscout's indexed on-chain data.
+
+## When Price Shows "—"
+
+A dash in the **Price** or **On-chain cap** field means the token has no recent DEX activity on Robinhood Chain and Blockscout has no current price data for it. The token still exists on-chain and its contract address and holder count remain accurate — it simply isn't actively trading at this time.
+
+<Tip>
+  Premium subscribers get live price updates and whale holder intelligence on every token. See [Live Prices & Whale Intelligence](/premium/live-prices) to learn more.
+</Tip>
+
+<Note>
+  Contract addresses are case-sensitive — always copy the full address exactly as shown. All data is provided for informational purposes only and is not investment advice.
+</Note>

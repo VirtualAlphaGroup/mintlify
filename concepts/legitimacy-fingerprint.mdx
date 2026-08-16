@@ -1,0 +1,54 @@
+---
+title: "Legitimacy Fingerprint: Launch Quality Signals"
+sidebarTitle: "Legitimacy Fingerprint"
+description: "The legitimacy fingerprint runs eight checks on every new launch to surface red flags and quality signals before the crowd notices."
+---
+
+The legitimacy fingerprint is a set of eight structured checks that VAG runs automatically the moment a new token launch is detected on Robinhood Chain. Each check targets a specific signal that separates well-prepared projects from rushed cash-grabs. You see the results before the launch has any price history — giving you a structural read on quality when on-chain data alone can't tell the full story.
+
+## The Eight Checks
+
+| Check | What It Verifies |
+|---|---|
+| **Real description** | The project has a genuine, non-generic description — not placeholder text or a one-liner copy from a template |
+| **website** | The token has a live, reachable website at launch time |
+| **socials** | Social media accounts (beyond X/Twitter) are linked in the token metadata |
+| **devWalletAge** | The developer wallet is not freshly created — a brand-new wallet is a common signal of a throwaway deployer |
+| **team** | Team information is explicitly provided rather than the project being anonymous by default |
+| **xAccount** | An X (Twitter) account is linked and exists |
+| **xPfp** | The linked X account has a profile picture set — bare accounts with no avatar are flagged |
+| **descriptionOriginal** | The project description has not been copy-pasted from another token or project already in the dataset |
+
+## How to Read Passed vs Failed
+
+On the [Launches page](/features/launch-feed), each launch card shows the fingerprint result as a row of pass/fail indicators:
+
+- **Green** — the check passed
+- **Red** — the check failed or the signal was absent
+
+A launch that goes green across the board has cleared every quality signal available at detection time. A launch with several red checks isn't automatically a scam — but it has fewer of the markers that historically correlate with good outcomes.
+
+## How Win-Rate Data Is Surfaced
+
+The **"Which fingerprint checks predict winners"** table on the Launches page breaks down the day-7 win rate for each individual check — showing you the win rate when a check **passed** versus when it **failed**. This lets you see empirically which checks have the strongest predictive relationship with a good day-7 outcome and which are weaker signals in practice.
+
+For example, if `devWalletAge` shows a 45% win rate on pass and 12% on fail, that gap tells you wallet age is a meaningful discriminator in the current dataset.
+
+<Tip>
+  Premium subscribers see the **full fingerprint breakdown** on every launch inside the Launch Radar feed — including the pass/fail state of each of the eight checks, surfaced the moment the launch is detected. You don't need to open the Launches page to get the read.
+</Tip>
+
+<Note>
+  Fingerprint checks are heuristic signals derived from on-chain and off-chain metadata available at launch time — they are not guarantees of project quality or future performance. A launch that passes all eight checks can still fail, and a launch that fails several checks can still succeed. Use the fingerprint as one input in your assessment, not as a binary verdict.
+</Note>
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="Launch Scoring" icon="star" href="/concepts/launch-scoring">
+    See how the fingerprint feeds into the AI viability score and the day-7 outcome pipeline.
+  </Card>
+  <Card title="Launch Feed" icon="bolt" href="/features/launch-feed">
+    Browse live launches with fingerprint results and viability scores.
+  </Card>
+</CardGroup>

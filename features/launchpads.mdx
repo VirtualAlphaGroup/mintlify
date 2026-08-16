@@ -1,0 +1,59 @@
+---
+title: "Launchpad Leaderboard: Token Factories on Robinhood Chain"
+sidebarTitle: "Launchpads"
+description: "The Launchpad Leaderboard tracks every factory contract shipping tokens on Robinhood Chain — launch counts, DEX volume, and each launchpad's native token."
+---
+
+The Launchpads page at [virtualalphagroup.com/launchpads](https://virtualalphagroup.com/launchpads) shows you every factory contract that has launched tokens on Robinhood Chain. Rather than piecing together on-chain data yourself, you get a ranked leaderboard with launch counts, DEX trading volume, and each launchpad's own token price and market cap — all in one place.
+
+## How Indexing Works
+
+VAG indexes **pool-creation events** directly from the chain. Every time a factory contract deploys a new token pool, VAG records it and attributes the launch to that originating factory address. Labeled contracts — such as Virtuals Protocol or Uniswap — are identified by name; unlabeled contracts appear by their on-chain address until they are identified and tagged.
+
+## What the Leaderboard Shows
+
+For each factory, the leaderboard surfaces:
+
+| Column | Description |
+|---|---|
+| **Rank** | Position by launch count |
+| **Launchpad** | Contract label (if known) and address |
+| **Kind** | Classification — `launchpad`, `DEX`, or `unlabeled` |
+| **Launches** | Total number of token launches attributed to this factory |
+| **Volume** | DEX-pair trading volume (Dune historical + DexScreener live feed, hourly buckets) |
+| **Token** | Native token price and market cap, where applicable |
+
+## Current Leaderboard
+
+| # | Launchpad | Kind | Launches | Volume | Token |
+|---|---|---|---|---|---|
+| 1 | `0x0d1e…4afd` | unlabeled | 121 | — | — |
+| 2 | Uniswap V3 `0x1f7d…2efa` | DEX | 74 | — | — |
+| 3 | Uniswap V2 `0x8bce…937f` | DEX | 12 | — | — |
+| 4 | Unknown V3 DEX `0xe519…433b` | DEX | 3,547 | — | — |
+| 5 | Virtuals `0xfc2e…20a9` | launchpad | 165 | — | $0.559 / $367.7M mcap |
+| 6 | `0x15ad…46e4` | unlabeled | 1 | — | — |
+| 7 | `0x8f69…612a` | unlabeled | 1 | — | — |
+
+## Key Notes
+
+**Virtuals Protocol** (`0xfc2e…20a9`) is the primary Virtuals Protocol factory on Robinhood Chain and the source of the launches tracked in the [Launch Feed](/features/launch-feed). It currently has 165 attributed launches and its native token trades at **$0.559** with a **$367.7M market cap**.
+
+**Unlabeled contracts** are factory addresses that have been indexed from pool-creation events but have not yet been identified and labeled. If you recognize an address, the VAG community can help get it tagged.
+
+**Generic DEX factories** — such as the Unknown V3 DEX with 3,547 launches — carry launch counts but are not treated as dedicated launchpads. Volume and token data are attributed where a clear pairing exists.
+
+<Note>
+  Volume figures reflect **DEX-pair volume only** (Dune historical data combined with a DexScreener live feed in hourly buckets). Pre-graduation bonding-curve volume — the trading that happens before a token graduates to a DEX — is not yet included. Launches are always attributed to their originating factory contract.
+</Note>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Launch Feed" icon="list" href="/features/launch-feed">
+    See every individual token launch detected by VAG across all launchpads.
+  </Card>
+  <Card title="Launch Scores" icon="chart-bar" href="/features/launch-scores">
+    Understand how VAG scores launches and tracks day-7 outcomes.
+  </Card>
+</CardGroup>

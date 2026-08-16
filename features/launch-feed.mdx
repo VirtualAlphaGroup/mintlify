@@ -1,0 +1,52 @@
+---
+title: "Launch Feed: Every New Token Alert in Real Time"
+sidebarTitle: "Launch Feed"
+description: "The Launch Feed lists every token launch detected by VAG's rh-launch-bot on Robinhood Chain, with AI viability scores and legitimacy fingerprints attached."
+---
+
+The Launch Feed at [virtualalphagroup.com/launches](https://virtualalphagroup.com/launches) gives you a live, scrollable record of every token launch VAG's `rh-launch-bot` has detected on Robinhood Chain. Each row surfaces the token name, launch timestamp, current outcome status, and — for Premium subscribers — an AI viability score and legitimacy fingerprint breakdown, so you can evaluate launches at a glance rather than digging through on-chain data yourself.
+
+## What the Bot Detects
+
+VAG's `rh-launch-bot` monitors every pool-creation event emitted by factory contracts on Robinhood Chain, including launches originating from Virtuals Protocol. The moment a new pool is created, the bot fires an alert and logs the launch to the feed. With roughly **180 launches recorded on Robinhood Chain in a 24-hour window** (compared to 22 on Base over the same period), the feed moves fast.
+
+## Reading the Feed
+
+The recent launches table shows the last **100 alerted launches**. Each row contains:
+
+| Column | Description |
+|---|---|
+| **Token** | Token name and ticker (e.g. JKER, HOODAI, CANDY) |
+| **Time** | Launch time in UTC |
+| **Status** | Outcome classification — Pending, Good, or Dud |
+| **Viability Score** | AI score assigned at launch time *(Premium)* |
+| **Fingerprint** | Legitimacy check results *(Premium)* |
+
+### Status Definitions
+
+- **Pending** — The launch is less than 7 days old; the day-7 outcome has not yet been assessed.
+- **Good** — By day 7, the token either graduated (listed on a major DEX with sufficient liquidity) or reached 3× or more of its launch market cap.
+- **Dud** — By day 7, the token did not graduate and did not reach the 3× market cap threshold.
+
+VAG has recorded **1,000 outcomes** to date, giving you a growing historical reference for how launches on Robinhood Chain actually perform.
+
+## Score and Fingerprint Methodology
+
+Every alerted launch receives an AI viability score and a legitimacy fingerprint at the time of detection. Seven days later, VAG checks the outcome and records it as Good or Dud. The analytics on the Launches page let you see, over time, whether higher-scored launches actually produce better outcomes.
+
+<Tip>
+  Premium subscribers get the full viability score and legitimacy fingerprint breakdown on every launch as it happens via [Launch Radar](/premium/launch-radar) — no waiting for the feed to update.
+</Tip>
+
+For a full explanation of how scores are calculated and how to interpret the day-7 outcome data, see [Launch Scores](/features/launch-scores).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Launch Scores" icon="chart-bar" href="/features/launch-scores">
+    Understand AI viability scoring, fingerprint checks, and day-7 outcome tracking.
+  </Card>
+  <Card title="Launch Radar" icon="satellite-dish" href="/premium/launch-radar">
+    Get real-time Premium alerts the moment a new launch is detected.
+  </Card>
+</CardGroup>

@@ -1,0 +1,73 @@
+---
+title: "Launch Scores: AI Viability and Day-7 Outcomes"
+sidebarTitle: "Launch Scores"
+description: "VAG attaches an AI viability score to every token launch and records day-7 outcomes, letting you see which signals actually predict winners over time."
+---
+
+Every token the `rh-launch-bot` detects on Robinhood Chain gets scored immediately at launch — before the market has had a chance to move. VAG then revisits each launch at the 7-day mark and records a concrete outcome. By pairing scores with real outcomes across a growing dataset, you can see which early signals actually correspond to winning tokens rather than relying on gut feel or lagging price action.
+
+## The AI Viability Score
+
+The viability score is assigned at the moment of launch detection. It combines legitimacy fingerprint checks (see below) with broader project signals to produce a single rating that indicates how viable a launch looks at the earliest possible moment.
+
+- **Visibility:** Available to **Premium (Basic+)** subscribers via the [Launch Feed](/features/launch-feed) and [Launch Radar](/premium/launch-radar).
+- **Timing:** Scored once at launch; the score does not change after assignment.
+- **Purpose:** A higher score signals that more positive indicators were present at launch — it is a starting point for your own research, not a guaranteed outcome.
+
+## The Day-7 Outcome Check
+
+Seven days after each launch, VAG automatically checks the token's status and records one of two outcomes:
+
+- **Good** — The token graduated (achieved a DEX listing with sufficient liquidity) or reached **3× or more** of its launch market cap.
+- **Dud** — The token did not graduate and did not reach the 3× market cap threshold within 7 days.
+
+With **1,000 outcomes recorded**, the Launches page at [virtualalphagroup.com/launches](https://virtualalphagroup.com/launches) gives you two analytics views to judge signal quality for yourself.
+
+## Analytics on the Launches Page
+
+### 1. Win Rate by Viability Bucket — "Does the viability score work?"
+
+This chart groups all scored launches by their viability bucket and shows the day-7 win rate for each bucket. Over time, a well-calibrated score should show higher win rates in the higher buckets. As the dataset grows and more outcomes are recorded, the pattern — or absence of one — becomes clearer.
+
+### 2. Fingerprint Check Edge Table — "Which fingerprint checks predict winners"
+
+This table breaks down the day-7 win rate for launches where each legitimacy check **passed** versus **failed**, along with the edge (the difference in win rate between the two groups).
+
+| Check | Win Rate (Passed) | Win Rate (Failed) | Edge |
+|---|---|---|---|
+| Real description | 0% (381 launches) | 0% (534 launches) | +0 pt |
+| Website | 0% (123 launches) | 0% (792 launches) | +0 pt |
+| Socials | 0% (670 launches) | 0% (245 launches) | +0 pt |
+| Dev wallet age | 0% (413 launches) | 0% (435 launches) | +0 pt |
+| Team | 0% (17 launches) | 0% (179 launches) | +0 pt |
+| X account | 0% (424 launches) | 0% (242 launches) | +0 pt |
+| X profile picture | 0% (530 launches) | 0% (136 launches) | +0 pt |
+| Original description | — (0 launches) | 0% (364 launches) | — |
+
+<Info>
+  The current dataset shows a **0% day-7 win rate across all buckets** for the 1,000 recorded outcomes. This is an accurate snapshot of the data as it stands — no launch in this cohort has yet graduated or reached 3× market cap. The figures will evolve as more launches clear the 7-day window and outcomes are recorded.
+</Info>
+
+## How to Interpret the Data
+
+The win rate is calculated per bucket or per check — it tells you what fraction of launches in that group ended up as **Good** outcomes. A few things to keep in mind as you use these analytics:
+
+- **Dataset size matters.** At 1,000 outcomes, patterns are starting to form but individual bucket counts can still be small. Treat low-sample buckets with caution.
+- **0% now ≠ 0% forever.** The current cohort reflects a specific slice of launches; as more launches graduate or hit 3×, the win rates will update automatically.
+- **Fingerprint edge shows relative value.** Even if absolute win rates are low, a positive edge on a check means that check is a better-than-average predictor within this dataset.
+- **Scores are a filter, not a forecast.** A high viability score narrows the field to launches that looked better at inception — it does not guarantee a good outcome.
+
+<Note>
+  Launch scores are informational signals to help you triage and research new token launches. They are not financial advice. Always conduct your own due diligence before making any investment decision.
+</Note>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Launch Feed" icon="list" href="/features/launch-feed">
+    Browse every detected launch with its status, score, and fingerprint results.
+  </Card>
+  <Card title="Launch Radar" icon="satellite-dish" href="/premium/launch-radar">
+    Receive real-time alerts with full scores and fingerprints the moment a launch is detected.
+  </Card>
+</CardGroup>
